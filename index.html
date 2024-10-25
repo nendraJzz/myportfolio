@@ -6,6 +6,8 @@
   <title>NndraSA — Portofolio</title>
   <link rel="icon" type="image/x-icon" href="images/code.png">
   <link href="./output.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
     <body class="bg-gradient-to-br from-gray-900 to-black">
@@ -124,10 +126,42 @@
                 <p class="font-sans text-md text-gray-300">*Click for code or demo</p>
               </ul>
             </article>
-            
-            
-            
 
+            <section id="contact">
+              <div class="my-6 mx-auto max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:max-w-full pt-24 px-4 sm:px-8 xl:px-1">
+                <h1 class="text-3xl font-medium font-serif text-white">Send Me A Message</h1>
+                
+                <form id="formcontact" class="mt-8 space-y-4 notosans">
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <p class="text-white text-sm">Name*</p>
+                      <input type='text' placeholder='yourname' name="nama" class="w-full rounded-md py-3 px-4 bg-slate-700 text-sm" required />
+                    </div>
+                    <div>
+                      <p class="text-white text-sm">Email*</p>
+                      <input type='email' placeholder='your@gmail.com' name="email" class="w-full rounded-md py-3 px-4 bg-slate-700 text-sm" required />
+                    </div>
+                  </div>
+                  <p class="text-white text-sm">Message*</p>
+                  <textarea placeholder='type a message...' rows="6" name="massage" class="w-full rounded-md px-4 bg-slate-700 text-sm pt-3" required></textarea>
+                  <button id="submitBtn" type='submit' class="tooltip flex items-center justify-center text-white bg-sky-700 hover:bg-sky-800 font-semibold rounded-md text-sm px-4 py-3 transition duration-300 w-full">
+                    <span id="buttonText">Send Message</span>
+                    <span id="loading" class="hidden ml-2 flex items-center">
+                      <div class="spinner"></div>
+                      <span class="ml-2">Sending...</span>
+                    </span>
+                  </button>
+                </form>
+              </div>
+            
+              <!-- Modal -->
+              <div id="successModal" class="fixed inset-0 flex items-center justify-center z-50 hidden bg-black bg-opacity-50">
+                <div class="bg-white rounded-lg p-4 max-w-sm mx-auto">
+                  <h2 class="text-md font-sans text-black font-medium">Message Sent Successfully!✅</h2>
+                </div>
+              </div>
+            </section>
+            
             <div class="h-10 md:h-10"></div>
                 
             <footer>
@@ -141,6 +175,6 @@
                     </div>
                 </div>
             </footer>
-        
+        <script src="javascript/contact.js"></script>
     </body>
 </html>
